@@ -64,8 +64,6 @@ install pam_skey_access.so	$RPM_BUILD_ROOT/lib/security
 install libskey.a		$RPM_BUILD_ROOT%{_libdir}
 install skey.h			$RPM_BUILD_ROOT%{_includedir}
 
-gzip -9nf ChangeLog README samples/*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -75,7 +73,7 @@ ls -l %{_sbindir}/skeyinit
 
 %files
 %defattr(644,root,root,755)
-%doc samples/* {ChangeLog,README}.gz
+%doc ChangeLog README samples/*
 %attr(644,root,root)  %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/skeykeys
 %attr(600,root,root)  %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/skeyaccess
 %attr(755,root,root)  %{_bindir}/skey
