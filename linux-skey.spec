@@ -5,15 +5,15 @@ Version:	0.2
 Release:	3
 Epoch:		0
 License:	Unknown
-Group:		Applications/System
 Vendor:		Olaf Kirch <okir@caldera.de>
+Group:		Applications/System
 Source0:	ftp://czort.wie.gdzie.de/pub/%{name}-%{version}.tar.gz
 # Source0-md5:	c88683f5e23eece9a9b97f35bb359c11
 URL:		http://linux.mathematik.tu-darmstadt.de/pub/linux/people/okir
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	pam-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	pam
 
 %description
 This package contains a Linux port of the S/Key applications.
@@ -25,9 +25,9 @@ Ten pakiet zawiera linuksow± wersjê aplikacji pakietu S/Key.
 Summary:	PAM modules for Linux-S/Key
 Summary(pl):	Modu³y PAM dla Linux-S/Key
 Group:		Applications/System
+Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	pam
 Obsoletes:	pam_skey
-Requires:	%{name} = %{version}
-BuildRequires:	pam-devel
 
 %description -n pam-pam_skey
 This package contains a Linux port of the S/Key PAM modules.
@@ -39,7 +39,7 @@ Ten pakiet zawiera linuksow± wersjê modu³ów PAM pakietu S/Key.
 Summary:	Header files, static library and documentation for linux-skey
 Summary(pl):	Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 
 %description devel
 Header files, static library and documentation for linux-skey.
@@ -96,7 +96,8 @@ ls -l %{_sbindir}/skeyinit
 %attr(644,root,root)  %{_mandir}/man*/*
 
 %files -n pam-pam_skey
-%attr(755,root,root)  /lib/security/*
+%defattr(644,root,root,755)
+%attr(755,root,root)  /lib/security/*.so
 
 %files devel
 %defattr(644,root,root,755)
