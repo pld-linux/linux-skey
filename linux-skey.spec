@@ -2,7 +2,8 @@ Summary:	Security one-time passwords
 Summary(pl):	Bezpieczne has³a jednokrotnego u¿ytku (one-time)
 Name:		linux-skey
 Version:	0.2
-Release:	2
+Release:	3
+Epoch:		0
 License:	Unknown
 Group:		Applications/System
 Vendor:		Olaf Kirch <okir@caldera.de>
@@ -15,11 +16,24 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	pam
 
 %description
-This package contains a Linux port of the S/Key applications, and two
-PAM modules.
+This package contains a Linux port of the S/Key applications.
 
 %description -l pl
-Linuksowa wersja pakietu S/Key. Zawiera modu³y autoryzuj±ce PAMa.
+Ten pakiet zawiera linuksow± wersjê aplikacji pakietu S/Key.
+
+%package -n pam-pam_skey
+Summary:	PAM modules for Linux-S/Key
+Summary(pl):	Modu³y PAM dla Linux-S/Key
+Group:		Applications/System
+Obsoletes:	pam_skey
+Requires:	%{name} = %{version}
+BuildRequires:	pam-devel
+
+%description -n pam-pam_skey
+This package contains a Linux port of the S/Key PAM modules.
+
+%description -n pam-pam_skey -l pl
+Ten pakiet zawiera linuksow± wersjê modu³ów PAM pakietu S/Key.
 
 %package devel
 Summary:	Header files, static library and documentation for linux-skey
@@ -80,6 +94,8 @@ ls -l %{_sbindir}/skeyinit
 %attr(755,root,root)  %{_bindir}/skey
 %attr(4755,root,root) %{_sbindir}/skeyinit
 %attr(644,root,root)  %{_mandir}/man*/*
+
+%files -n pam-pam_skey
 %attr(755,root,root)  /lib/security/*
 
 %files devel
