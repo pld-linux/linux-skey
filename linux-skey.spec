@@ -36,10 +36,10 @@ Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
 Requires:	%{name} = %{version}
 
 %description devel
-Header files, static library and documentation for linux-skey
+Header files, static library and documentation for linux-skey.
 
 %description devel -l pl
-Pliki nag≥Ûwkowe, biblioteka statyczna i dokumentacja do linux-skey
+Pliki nag≥Ûwkowe, biblioteka statyczna i dokumentacja do linux-skey.
 
 %prep
 %setup -q
@@ -73,8 +73,7 @@ install pam_skey_access.so	$RPM_BUILD_ROOT/lib/security
 install libskey.a		$RPM_BUILD_ROOT%{_libdir}
 install skey.h			$RPM_BUILD_ROOT%{_includedir}
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/* \
-        ChangeLog README samples/*
+gzip -9nf ChangeLog README samples/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
