@@ -38,7 +38,7 @@ Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey
 %build
 %configure
 
-make 
+%{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
