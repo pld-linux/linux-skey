@@ -40,7 +40,7 @@ aclocal
 autoconf
 %configure
 
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -69,7 +69,7 @@ gzip -9nf ChangeLog README samples/*
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post 
+%post
 echo "Warning:skeyinit is a suid file"
 ls -l %{_sbindir}/skeyinit
 
