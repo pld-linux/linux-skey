@@ -36,7 +36,7 @@ Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey.
 %setup -q
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 
