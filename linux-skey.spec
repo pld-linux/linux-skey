@@ -4,27 +4,30 @@ Name:		linux-skey
 Version:	0.2
 Release:	1
 Copyright:	Unknown
-Group:          Utilities/System
-Group(pl):      Narzêdzia/System
-Source:		ftp://czort.wie.gdzie.de/pub/linux-skey-0.2.tar.gz
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
+Source0:	ftp://czort.wie.gdzie.de/pub/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Vendor:		Olaf Kirch <okir@caldera.de>
 Requires:	pam
 Url:		http://linux.mathematik.tu-darmstadt.de/pub/linux/people/okir
 
 %description
-This package contains a Linux port of the S/Key
-applications, and two PAM modules.
+This package contains a Linux port of the S/Key applications, and two
+PAM modules.
 
 %description -lpl
 Linuxowa wersja pakietu S/Key. Zawiera modu³y autoryzuj±ce PAMa.
 
 %package devel
-Summary:        Header files, static library and documentation for linux-skey
-Summary(pl):    Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey
-Group:          Development/Libraries
-Group(pl):      Programowanie/Biblioteki
-Requires:       %{name} = %{version}
+Summary:	Header files, static library and documentation for linux-skey
+Summary(pl):	Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey
+Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
+Group(fr):	Development/Librairies
+Group(pl):	Programowanie/Biblioteki
+Requires:	%{name} = %{version}
 
 %description devel
 Header files, static library and documentation for linux-skey
@@ -69,11 +72,11 @@ gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man*/* \
 rm -rf $RPM_BUILD_ROOT
 
 %post 
-echo "Warning: skeyinit is a suid file"
+echo "Warning:skeyinit is a suid file"
 ls -l %{_sbindir}/skeyinit
 
 %files
-%defattr(644,root,root)
+%defattr(644,root,root,755)
 %doc samples/* {ChangeLog,README}.gz
 %attr(644,root,root)  %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/skeykeys
 %attr(600,root,root)  %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/skeyaccess
@@ -83,5 +86,6 @@ ls -l %{_sbindir}/skeyinit
 %attr(755,root,root)  /lib/security/*
 
 %files devel
+%defattr(644,root,root,755)
 %attr(644,root,root) %{_libdir}/*.a
 %attr(644,root,root) %{_includedir}/*.h
