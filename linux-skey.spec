@@ -56,12 +56,12 @@ install -d $RPM_BUILD_ROOT%{_mandir}/man{1,3,5}
 
 install /dev/null		$RPM_BUILD_ROOT%{_sysconfdir}/skeykeys
 install	/dev/null		$RPM_BUILD_ROOT%{_sysconfdir}/skeyaccess
-install -s skey			$RPM_BUILD_ROOT%{_bindir}/skey
-install -s skeyinit		$RPM_BUILD_ROOT%{_sbindir}/skeyinit
+install skey			$RPM_BUILD_ROOT%{_bindir}/skey
+install skeyinit		$RPM_BUILD_ROOT%{_sbindir}/skeyinit
 install doc/*.1			$RPM_BUILD_ROOT%{_mandir}/man1
 install doc/*.5			$RPM_BUILD_ROOT%{_mandir}/man5
-install -s pam_skey.so		$RPM_BUILD_ROOT/lib/security
-install -s pam_skey_access.so	$RPM_BUILD_ROOT/lib/security
+install pam_skey.so		$RPM_BUILD_ROOT/lib/security
+install pam_skey_access.so	$RPM_BUILD_ROOT/lib/security
 install libskey.a		$RPM_BUILD_ROOT%{_libdir}
 install skey.h			$RPM_BUILD_ROOT%{_includedir}
 
