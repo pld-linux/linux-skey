@@ -1,0 +1,4 @@
+- pam-pam_skey subpackage created
+- added Epoch tag
+- added BuildRequires: pam-devel
+- release 3
