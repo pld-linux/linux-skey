@@ -7,6 +7,7 @@ License:	Unknown
 Group:		Applications/System
 Vendor:		Olaf Kirch <okir@caldera.de>
 Source0:	ftp://czort.wie.gdzie.de/pub/%{name}-%{version}.tar.gz
+# Source0-md5:	c88683f5e23eece9a9b97f35bb359c11
 URL:		http://linux.mathematik.tu-darmstadt.de/pub/linux/people/okir
 BuildRequires:	autoconf
 BuildRequires:	automake
