@@ -4,7 +4,7 @@ Name:		linux-skey
 Version:	0.2
 Release:	3
 Epoch:		0
-License:	Unknown
+License:	unknown
 Vendor:		Olaf Kirch <okir@caldera.de>
 Group:		Applications/System
 Source0:	ftp://czort.wie.gdzie.de/pub/%{name}-%{version}.tar.gz
