@@ -7,7 +7,7 @@ Copyright:	Unknown
 Group:          Utilities/System
 Group(pl):      Narzêdzia/System
 Source:		ftp://czort.wie.gdzie.de/pub/linux-skey-0.2.tar.gz
-Buildroot:	/var/tmp/%{name}-%{version}
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Vendor:		Olaf Kirch <okir@caldera.de>
 Requires:	pam
 Url:		http://linux.mathematik.tu-darmstadt.de/pub/linux/people/okir
