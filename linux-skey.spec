@@ -5,8 +5,6 @@ Version:	0.2
 Release:	2
 License:	Unknown
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Vendor:		Olaf Kirch <okir@caldera.de>
 Source0:	ftp://czort.wie.gdzie.de/pub/%{name}-%{version}.tar.gz
 URL:		http://linux.mathematik.tu-darmstadt.de/pub/linux/people/okir
@@ -26,13 +24,6 @@ Linuksowa wersja pakietu S/Key. Zawiera modu³y autoryzuj±ce PAMa.
 Summary:	Header files, static library and documentation for linux-skey
 Summary(pl):	Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
-Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
 Requires:	%{name} = %{version}
 
 %description devel
