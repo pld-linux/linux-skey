@@ -2,8 +2,8 @@ Summary:	Security one-time passwords
 Summary(pl):	Bezpieczne has³a jednokrotnego u¿ytku (one-time)
 Name:		linux-skey
 Version:	0.2
-Release:	1
-Copyright:	Unknown
+Release:	2
+License:	Unknown
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
@@ -39,6 +39,8 @@ Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey
 %setup -q
 
 %build
+aclocal
+autoconf
 %configure
 
 %{__make} 
