@@ -7,26 +7,32 @@ License:	Unknown
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
-Source0:	ftp://czort.wie.gdzie.de/pub/%{name}-%{version}.tar.gz
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Vendor:		Olaf Kirch <okir@caldera.de>
+Source0:	ftp://czort.wie.gdzie.de/pub/%{name}-%{version}.tar.gz
+URL:		http://linux.mathematik.tu-darmstadt.de/pub/linux/people/okir
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	pam
-Url:		http://linux.mathematik.tu-darmstadt.de/pub/linux/people/okir
 
 %description
 This package contains a Linux port of the S/Key applications, and two
 PAM modules.
 
-%description -lpl
-Linuxowa wersja pakietu S/Key. Zawiera modu≥y autoryzuj±ce PAMa.
+%description -l pl
+Linuksowa wersja pakietu S/Key. Zawiera modu≥y autoryzuj±ce PAMa.
 
 %package devel
 Summary:	Header files, static library and documentation for linux-skey
 Summary(pl):	Pliki nag≥Ûwkowe, biblioteka statyczna i dokumentacja do linux-skey
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
 Requires:	%{name} = %{version}
 
 %description devel
