@@ -39,7 +39,7 @@ Ten pakiet zawiera linuksow± wersjê modu³ów PAM pakietu S/Key.
 Summary:	Header files, static library and documentation for linux-skey
 Summary(pl):	Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 Header files, static library and documentation for linux-skey.
@@ -59,13 +59,8 @@ Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT%{_sysconfdir}
-install -d $RPM_BUILD_ROOT/lib/security
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_sbindir}
-install -d $RPM_BUILD_ROOT%{_libdir}
-install -d $RPM_BUILD_ROOT%{_includedir}
+install -d $RPM_BUILD_ROOT{%{_sysconfdir},/%{_lib}/security} \
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_sbindir},%{_libdir},%{_includedir}}
 install -d $RPM_BUILD_ROOT%{_mandir}/man{1,3,5}
 
 install /dev/null		$RPM_BUILD_ROOT%{_sysconfdir}/skeykeys
@@ -74,8 +69,8 @@ install skey			$RPM_BUILD_ROOT%{_bindir}/skey
 install skeyinit		$RPM_BUILD_ROOT%{_sbindir}/skeyinit
 install doc/*.1			$RPM_BUILD_ROOT%{_mandir}/man1
 install doc/*.5			$RPM_BUILD_ROOT%{_mandir}/man5
-install pam_skey.so		$RPM_BUILD_ROOT/lib/security
-install pam_skey_access.so	$RPM_BUILD_ROOT/lib/security
+install pam_skey.so		$RPM_BUILD_ROOT/%{_lib}/security
+install pam_skey_access.so	$RPM_BUILD_ROOT/%{_lib}/security
 install libskey.a		$RPM_BUILD_ROOT%{_libdir}
 install skey.h			$RPM_BUILD_ROOT%{_includedir}
 
@@ -97,7 +92,7 @@ ls -l %{_sbindir}/skeyinit
 
 %files -n pam-pam_skey
 %defattr(644,root,root,755)
-%attr(755,root,root)  /lib/security/*.so
+%attr(755,root,root)  /%{_lib}/security/*.so
 
 %files devel
 %defattr(644,root,root,755)
