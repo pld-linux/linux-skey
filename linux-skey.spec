@@ -84,8 +84,8 @@ ls -l %{_sbindir}/skeyinit
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README samples/*
-%attr(644,root,root)  %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/skeykeys
-%attr(600,root,root)  %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/skeyaccess
+%attr(644,root,root)  %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/skeykeys
+%attr(600,root,root)  %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/skeyaccess
 %attr(755,root,root)  %{_bindir}/skey
 %attr(4755,root,root) %{_sbindir}/skeyinit
 %attr(644,root,root)  %{_mandir}/man*/*
