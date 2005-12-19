@@ -84,17 +84,17 @@ ls -l %{_sbindir}/skeyinit
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README samples/*
-%attr(644,root,root)  %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/skeykeys
-%attr(600,root,root)  %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/skeyaccess
-%attr(755,root,root)  %{_bindir}/skey
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/skeykeys
+%attr(600,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/skeyaccess
+%attr(755,root,root) %{_bindir}/skey
 %attr(4755,root,root) %{_sbindir}/skeyinit
-%attr(644,root,root)  %{_mandir}/man*/*
+%{_mandir}/man*/*
 
 %files -n pam-pam_skey
 %defattr(644,root,root,755)
-%attr(755,root,root)  /%{_lib}/security/*.so
+%attr(755,root,root) /%{_lib}/security/*.so
 
 %files devel
 %defattr(644,root,root,755)
-%attr(644,root,root) %{_libdir}/*.a
-%attr(644,root,root) %{_includedir}/*.h
+%{_libdir}/*.a
+%{_includedir}/*.h
