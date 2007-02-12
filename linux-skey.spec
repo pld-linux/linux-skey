@@ -1,5 +1,5 @@
 Summary:	Security one-time passwords
-Summary(pl):	Bezpieczne has³a jednokrotnego u¿ytku (one-time)
+Summary(pl.UTF-8):   Bezpieczne hasÅ‚a jednokrotnego uÅ¼ytku (one-time)
 Name:		linux-skey
 Version:	0.2
 Release:	3
@@ -18,12 +18,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This package contains a Linux port of the S/Key applications.
 
-%description -l pl
-Ten pakiet zawiera linuksow± wersjê aplikacji pakietu S/Key.
+%description -l pl.UTF-8
+Ten pakiet zawiera linuksowÄ… wersjÄ™ aplikacji pakietu S/Key.
 
 %package -n pam-pam_skey
 Summary:	PAM modules for Linux-S/Key
-Summary(pl):	Modu³y PAM dla Linux-S/Key
+Summary(pl.UTF-8):   ModuÅ‚y PAM dla Linux-S/Key
 Group:		Applications/System
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	pam
@@ -32,20 +32,20 @@ Obsoletes:	pam_skey
 %description -n pam-pam_skey
 This package contains a Linux port of the S/Key PAM modules.
 
-%description -n pam-pam_skey -l pl
-Ten pakiet zawiera linuksow± wersjê modu³ów PAM pakietu S/Key.
+%description -n pam-pam_skey -l pl.UTF-8
+Ten pakiet zawiera linuksowÄ… wersjÄ™ moduÅ‚Ã³w PAM pakietu S/Key.
 
 %package devel
 Summary:	Header files, static library and documentation for linux-skey
-Summary(pl):	Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe, biblioteka statyczna i dokumentacja do linux-skey
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 Header files, static library and documentation for linux-skey.
 
-%description devel -l pl
-Pliki nag³ówkowe, biblioteka statyczna i dokumentacja do linux-skey.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe, biblioteka statyczna i dokumentacja do linux-skey.
 
 %prep
 %setup -q
