@@ -1,5 +1,5 @@
 Summary:	Security one-time passwords
-Summary(pl.UTF-8):   Bezpieczne hasła jednokrotnego użytku (one-time)
+Summary(pl.UTF-8):	Bezpieczne hasła jednokrotnego użytku (one-time)
 Name:		linux-skey
 Version:	0.2
 Release:	3
@@ -23,7 +23,7 @@ Ten pakiet zawiera linuksową wersję aplikacji pakietu S/Key.
 
 %package -n pam-pam_skey
 Summary:	PAM modules for Linux-S/Key
-Summary(pl.UTF-8):   Moduły PAM dla Linux-S/Key
+Summary(pl.UTF-8):	Moduły PAM dla Linux-S/Key
 Group:		Applications/System
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	pam
@@ -37,7 +37,7 @@ Ten pakiet zawiera linuksową wersję modułów PAM pakietu S/Key.
 
 %package devel
 Summary:	Header files, static library and documentation for linux-skey
-Summary(pl.UTF-8):   Pliki nagłówkowe, biblioteka statyczna i dokumentacja do linux-skey
+Summary(pl.UTF-8):	Pliki nagłówkowe, biblioteka statyczna i dokumentacja do linux-skey
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
